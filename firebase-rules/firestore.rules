@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // السماح بالقراءة للجميع
+    match /content/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+    }
+    
+    // السماح بالقراءة والكتابة للمشاريع
+    match /projects/{document} {
+      allow read: if true;
+      allow write: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update: if request.auth != null;
+      allow delete: if request.auth != null;
+    }
+  }
+}
