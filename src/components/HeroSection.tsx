@@ -134,7 +134,7 @@ const HeroSection = () => {
   const socials = getSocialLinks();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-20">
       {/* Background image */}
       <div className="absolute inset-0">
         <img src={heroBg} alt="" className="w-full h-full object-cover opacity-60" />
@@ -158,9 +158,9 @@ const HeroSection = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="mb-8 relative"
+              className="mb-6 relative"
             >
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 lg:w-44 lg:h-44">
                 {/* Simple border */}
                 <div className="absolute inset-0 rounded-full bg-border/20"></div>
                 
@@ -174,20 +174,20 @@ const HeroSection = () => {
             </motion.div>
           )}
 
-          <p className="mb-4 text-sm font-medium uppercase tracking-[0.3em] text-primary">
+          <p className="mb-3 text-xs font-medium uppercase tracking-[0.3em] text-primary">
             Building the future of the web
           </p>
-          <h1 className="mb-2 font-display text-5xl font-bold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="mb-2 font-display text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             <span className="text-foreground">Hi, I'm </span>
             <span className="text-gradient">{data.name}</span>
           </h1>
-          <div className="mb-8 h-12 flex items-center justify-center">
-            <span className="font-display text-2xl font-light text-muted-foreground sm:text-3xl">
+          <div className="mb-6 h-10 flex items-center justify-center">
+            <span className="font-display text-xl font-light text-muted-foreground sm:text-2xl">
               {displayed}
               <span className="animate-pulse-glow text-primary">|</span>
             </span>
           </div>
-          <p className="mx-auto mb-10 max-w-xl text-base leading-relaxed text-muted-foreground">
+          <p className="mx-auto mb-8 max-w-xl text-sm leading-relaxed text-muted-foreground">
             {data.tagline}
           </p>
         </motion.div>
@@ -196,7 +196,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="flex flex-col items-center gap-6"
+          className="flex flex-col items-center gap-5"
         >
           <a
             href="#projects"
@@ -208,7 +208,7 @@ const HeroSection = () => {
           
           {/* Social Media Icons */}
           {socials.length > 0 && (
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               {socials.map((social) => (
                 <motion.a
                   key={social.label}
@@ -218,14 +218,14 @@ const HeroSection = () => {
                   aria-label={social.label}
                   whileHover={{ scale: 1.15, y: -3 }}
                   whileTap={{ scale: 0.95 }}
-                  className="group relative flex h-12 w-12 items-center justify-center rounded-xl transition-all duration-300"
+                  className="group relative flex h-10 w-10 items-center justify-center rounded-xl transition-all duration-300"
                   style={{
                     backgroundColor: `${social.color}15`,
                     border: `2px solid ${social.color}40`
                   }}
                 >
                   <social.icon 
-                    className="text-2xl transition-all duration-300" 
+                    className="text-xl transition-all duration-300" 
                     style={{ color: social.color }}
                   />
                   <div 

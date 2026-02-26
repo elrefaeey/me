@@ -28,7 +28,7 @@ const AboutSection = () => {
     loadData();
   }, []);
   return (
-    <section id="about" className="relative py-32 section-glow">
+    <section id="about" className="relative py-20 section-glow">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -37,11 +37,11 @@ const AboutSection = () => {
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-primary">About Me</p>
-          <h2 className="mb-6 font-display text-4xl font-bold text-foreground sm:text-5xl">
+          <p className="mb-2 text-xs font-medium uppercase tracking-[0.3em] text-primary">About Me</p>
+          <h2 className="mb-5 font-display text-3xl font-bold text-foreground sm:text-4xl">
             Passionate About <span className="text-gradient">Digital Craft</span>
           </h2>
-          <p className="mb-12 text-lg leading-relaxed text-muted-foreground">
+          <p className="mb-10 text-base leading-relaxed text-muted-foreground">
             {content}
           </p>
         </motion.div>
@@ -51,14 +51,14 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7, delay: 0.2 }}
-          className="mx-auto grid max-w-3xl grid-cols-1 gap-6 sm:grid-cols-3"
+          className="mx-auto grid max-w-3xl grid-cols-1 gap-5 sm:grid-cols-3"
         >
           {highlights.map((item, i) => (
             <div
               key={item.label}
-              className="glass glow-border glow-border-hover hover-lift rounded-xl p-6 text-center"
+              className="glass glow-border glow-border-hover hover-lift rounded-xl p-5 text-center"
             >
-              <item.icon className="mx-auto mb-3 text-primary" size={28} />
+              <item.icon className="mx-auto mb-2 text-primary" size={24} />
               <h3 className="mb-1 font-display text-sm font-semibold text-foreground">{item.label}</h3>
               <p className="text-xs text-muted-foreground">{item.desc}</p>
             </div>

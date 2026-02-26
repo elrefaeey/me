@@ -95,17 +95,17 @@ const ContactSection = () => {
   const socials = getSocialLinks();
 
   return (
-    <section id="contact" className="relative py-32 section-glow">
+    <section id="contact" className="relative py-20 section-glow">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="mb-16 text-center"
+          className="mb-12 text-center"
         >
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-primary">Contact</p>
-          <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+          <p className="mb-2 text-xs font-medium uppercase tracking-[0.3em] text-primary">Contact</p>
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
             Let's <span className="text-gradient">Connect</span>
           </h2>
         </motion.div>
@@ -117,9 +117,9 @@ const ContactSection = () => {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mx-auto max-w-2xl"
         >
-          <div className="glass glow-border rounded-2xl p-12">
+          <div className="glass glow-border rounded-2xl p-10">
             {socials.length > 0 ? (
-              <div className="flex flex-wrap items-center justify-center gap-6">
+              <div className="flex flex-wrap items-center justify-center gap-5">
                 {socials.map((social) => (
                   <motion.a
                     key={social.label}
@@ -129,14 +129,14 @@ const ContactSection = () => {
                     aria-label={social.label}
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group relative flex h-16 w-16 items-center justify-center rounded-2xl transition-all duration-300"
+                    className="group relative flex h-14 w-14 items-center justify-center rounded-2xl transition-all duration-300"
                     style={{
                       backgroundColor: `${social.color}15`,
                       border: `2px solid ${social.color}40`
                     }}
                   >
                     <social.icon 
-                      className="text-3xl transition-all duration-300" 
+                      className="text-2xl transition-all duration-300" 
                       style={{ color: social.color }}
                     />
                     <div 

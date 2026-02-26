@@ -46,22 +46,22 @@ const ProjectsSection = () => {
     loadProjects();
   }, []);
   return (
-    <section id="projects" className="relative py-32 section-glow">
+    <section id="projects" className="relative py-20 section-glow">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="mb-16 text-center"
+          className="mb-12 text-center"
         >
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-primary">Projects</p>
-          <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+          <p className="mb-2 text-xs font-medium uppercase tracking-[0.3em] text-primary">Projects</p>
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
             Featured <span className="text-gradient">Work</span>
           </h2>
         </motion.div>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
           {loading ? (
             <div className="col-span-2 text-center py-12">
               <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto"></div>
@@ -110,9 +110,9 @@ const ProjectsSection = () => {
                     )}
                   </div>
                 </div>
-                <div className="p-6">
-                  <h3 className="mb-2 font-display text-lg font-bold text-foreground">{project.title}</h3>
-                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
+                <div className="p-5">
+                  <h3 className="mb-2 font-display text-base font-bold text-foreground">{project.title}</h3>
+                  <p className="mb-3 text-sm leading-relaxed text-muted-foreground">{project.description}</p>
                 </div>
               </motion.div>
             ))

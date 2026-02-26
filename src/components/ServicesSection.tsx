@@ -11,22 +11,22 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="relative py-32">
+    <section id="services" className="relative py-20">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="mb-16 text-center"
+          className="mb-12 text-center"
         >
-          <p className="mb-3 text-sm font-medium uppercase tracking-[0.3em] text-primary">Services</p>
-          <h2 className="font-display text-4xl font-bold text-foreground sm:text-5xl">
+          <p className="mb-2 text-xs font-medium uppercase tracking-[0.3em] text-primary">Services</p>
+          <h2 className="font-display text-3xl font-bold text-foreground sm:text-4xl">
             What I <span className="text-gradient">Offer</span>
           </h2>
         </motion.div>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -34,11 +34,11 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="glass glow-border glow-border-hover hover-lift group rounded-xl p-8"
+              className="glass glow-border glow-border-hover hover-lift group rounded-xl p-6"
             >
-              <service.icon className="mb-4 text-primary transition-transform duration-300 group-hover:scale-110" size={32} />
-              <h3 className="mb-2 font-display text-base font-bold text-foreground">{service.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{service.desc}</p>
+              <service.icon className="mb-3 text-primary transition-transform duration-300 group-hover:scale-110" size={28} />
+              <h3 className="mb-2 font-display text-sm font-bold text-foreground">{service.title}</h3>
+              <p className="text-xs leading-relaxed text-muted-foreground">{service.desc}</p>
             </motion.div>
           ))}
         </div>
